@@ -340,21 +340,24 @@ export default function PreboardForm() {
               </div>
             )}
 
-            {student && student.fee_status === 'pending' && (
-              <div className="rounded-lg border border-destructive/50 bg-destructive/10 p-4 text-center">
-                <AlertCircle className="mx-auto mb-2 h-8 w-8 text-destructive" />
-                <p className="font-medium text-destructive">Fee pending. Please contact school office.</p>
-              </div>
-            )}
-
-            {student && student.fee_status === 'paid' && !student.is_submitted && !formSubmitted && (
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="rounded-lg bg-primary/5 p-4">
+            {student && (
+              <>
+                <div className="rounded-lg bg-blue-50 border border-blue-200 p-4 mb-4">
                   <p><strong>Name:</strong> {student.student_name}</p>
-                  <p><strong>Class:</strong> {student.class} | <strong>Roll:</strong> {student.roll_no}</p>
                   <p><strong>Father:</strong> {student.father_name}</p>
+                  <p><strong>Fee Status:</strong> {student.fee_status}</p>
                 </div>
-                <div><Label>Aadhar Number *</Label><Input value={aadharNo} onChange={(e) => setAadharNo(e.target.value)} maxLength={12} placeholder="Enter 12-digit Aadhar" /></div>
+            
+                {student.fee_status.toLowerCase() === 'pending' && (
+                  <div className="rounded-lg border border-destructive/50 bg-destructive/10 p-4 text-center">
+                    <AlertCircle className="mx-auto mb-2 h-8 w-8 text-destructive" />
+                    <p className="font-medium text-destructive">Your fee is pending. Please contact Principal Office.</p>
+                  </div>
+                )}
+
+                {student.fee_status === 'paid' && !student.is_submitted && !formSubmitted && (
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <div><Label>Aadhar Number *</Label><Input value={aadharNo} onChange={(e) => setAadharNo(e.target.value)} maxLength={12} placeholder="Enter 12-digit Aadhar" /></div>
                 
                 <div className="space-y-2">
                   <Label>Photograph *</Label>
@@ -391,6 +394,8 @@ export default function PreboardForm() {
                 </div>
                 <Button type="submit" className="w-full" disabled={isSubmitting}>{isSubmitting ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" />Submitting...</> : 'Submit Form'}</Button>
               </form>
+                )}
+              </>
             )}
 
             {formSubmitted && (
