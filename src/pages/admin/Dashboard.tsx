@@ -44,64 +44,72 @@ export default function Dashboard() {
 
   return (
     <AdminLayout>
-      <div className="space-y-6">
-        <div>
-          <h1 className="text-3xl font-bold text-foreground">Dashboard</h1>
-          <p className="text-muted-foreground">Welcome to the admin dashboard</p>
-        </div>
+      <div className="flex flex-col h-full">
+        {/* Fixed Header Section */}
+        <div className="sticky top-0 z-10 bg-background border-b border-border pb-6">
+          <div className="space-y-6">
+            <div>
+              <h1 className="text-3xl font-bold text-foreground">Dashboard</h1>
+              <p className="text-muted-foreground">Welcome to the admin dashboard</p>
+            </div>
 
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {stats.map((stat) => (
-            <Card key={stat.title}>
-              <CardHeader className="flex flex-row items-center justify-between pb-2">
-                <CardTitle className="text-sm font-medium text-muted-foreground">
-                  {stat.title}
-                </CardTitle>
-                <stat.icon className={`h-5 w-5 ${stat.color}`} />
-              </CardHeader>
-              <CardContent>
-                <div className="text-3xl font-bold">
-                  {isLoading ? '...' : stat.value}
-                </div>
-                <p className="text-xs text-muted-foreground">{stat.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        <Card>
-          <CardHeader>
-            <CardTitle>Recent Students</CardTitle>
-            <CardDescription>Latest student registrations</CardDescription>
-          </CardHeader>
-          <CardContent>
-            {isLoading ? (
-              <p className="text-muted-foreground">Loading...</p>
-            ) : students.length === 0 ? (
-              <p className="text-muted-foreground">No students registered yet.</p>
-            ) : (
-              <div className="space-y-4">
-                {students.slice(0, 5).map((student) => (
-                  <div key={student.id} className="flex items-center justify-between border-b border-border pb-4 last:border-0 last:pb-0">
-                    <div>
-                      <p className="font-medium">{student.student_name}</p>
-                      <p className="text-sm text-muted-foreground">
-                        {student.class} - Roll No: {student.roll_no}
-                      </p>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+              {stats.map((stat) => (
+                <Card key={stat.title}>
+                  <CardHeader className="flex flex-row items-center justify-between pb-2">
+                    <CardTitle className="text-sm font-medium text-muted-foreground">
+                      {stat.title}
+                    </CardTitle>
+                    <stat.icon className={`h-5 w-5 ${stat.color}`} />
+                  </CardHeader>
+                  <CardContent>
+                    <div className="text-3xl font-bold">
+                      {isLoading ? '...' : stat.value}
                     </div>
-                    <span className={`rounded-full px-3 py-1 text-xs font-medium ${
-                      student.fee_status === 'paid' 
-                        ? 'bg-primary/10 text-primary' 
-                        : 'bg-destructive/10 text-destructive'
-                    }`}>
-                      {student.fee_status === 'paid' ? 'Paid' : 'Pending'}
-                    </span>
+                    <p className="text-xs text-muted-foreground">{stat.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Scrollable Content Section */}
+        <div className="flex-1 overflow-hidden">
+          <Card className="flex-1 flex flex-col h-full">
+            <CardHeader className="flex-shrink-0">
+              <CardTitle>Recent Students</CardTitle>
+              <CardDescription>Latest student registrations</CardDescription>
+            </CardHeader>
+            <CardContent className="flex-1 overflow-y-auto">
+              {isLoading ? (
+                <p className="text-muted-foreground">Loading...</p>
+              ) : students.length === 0 ? (
+                <p className="text-muted-foreground">No students registered yet.</p>
+              ) : (
+                <div className="space-y-4">
+                  {students.map((student) => (
+                    <div key={student.id} className="flex items-center justify-between border-b border-border pb-4 last:border-0 last:pb-0">
+                      <div>
+                        <p className="font-medium">{student.student_name}</p>
+                        <p className="text-sm text-muted-foreground">
+                          {student.class} - Roll No: {student.roll_no}
+                        </p>
+                      </div>
+                      <span className={`rounded-full px-3 py-1 text-xs font-medium ${
+                        student.fee_status === 'paid' 
+                          ? 'bg-primary/10 text-primary' 
+                          : 'bg-destructive/10 text-destructive'
+                      }`}>
+                        {student.fee_status === 'paid' ? 'Paid' : 'Pending'}
+                      </span>
                   </div>
                 ))}
               </div>
             )}
           </CardContent>
-        </Card>
+          </Card>
+        </div>
       </div>
     </AdminLayout>
   );
