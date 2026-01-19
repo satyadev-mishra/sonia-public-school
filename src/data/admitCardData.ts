@@ -28,68 +28,70 @@ export const admitCardData: AdmitCardData = {
   class: {
     "9": {
       subjects: [
-        { "name": "SCT.", "day": "Monday", "date": "2026-01-19" },
-        { "name": "English", "day": "Tuesday", "date": "2026-01-20" },
-        { "name": "Hindi", "day": "Wednesday", "date": "2026-01-21" },
-        { "name": "SST", "day": "Thursday", "date": "2026-01-22" },
-        { "name": "Physical Edu.", "day": "Saturday", "date": "2026-01-24" },
-        { "name": "Mathematics", "day": "Tuesday", "date": "2026-01-27" },
-        { "name": "SKT", "day": "Wednesday", "date": "2026-01-28" }
+        { "name": "Maths", "day": "Thursday", "date": "22-01-2026" },
+        { "name": "English", "day": "Friday", "date": "23-01-2026" },
+        { "name": "Science", "day": "Saturday", "date": "24-01-2026" },
+        { "name": "Hindi", "day": "Wednesday", "date": "28-01-2026" },
+        { "name": "Physical Edu", "day": "Thursday", "date": "29-01-2026" },
+        { "name": "SKT", "day": "Friday", "date": "30-01-2026" },
+        { "name": "Social Science", "day": "Monday", "date": "02-02-2026" }
       ]
     },
     "10": {
       subjects: [
-        { "name": "Mathematics", "day": "Monday", "date": "2026-01-19" },
-        { "name": "Hindi", "day": "Tuesday", "date": "2026-01-20" },
-        { "name": "English", "day": "Wednesday", "date": "2026-01-21" },
-        { "name": "SST", "day": "Thursday", "date": "2026-01-22" },
-        { "name": "SCT.", "day": "Saturday", "date": "2026-01-24" },
-        { "name": "Physical Edu", "day": "Tuesday", "date": "2026-01-27" }
+        { "name": "Science.", "day": "Thursday", "date": "22-01-2026" },
+        { "name": "Hindi", "day": "Friday", "date": "23-01-2026" },
+        { "name": "Maths", "day": "Saturday", "date": "24-01-2026" },
+        { "name": "Physical Edu", "day": "Wednesday", "date": "28-01-2026" },
+        { "name": "English", "day": "Thursday", "date": "29-01-2026" },
+        { "name": "Social Science", "day": "Friday", "date": "30-01-2026" },
       ]
     },
     "11-arts": {
       subjects: [
-        { "name": "English", "day": "Monday", "date": "2026-01-19" },
-        { "name": "Pol. Sci", "day": "Tuesday", "date": "2026-01-20" },
-        { "name": "History", "day": "Wednesday", "date": "2026-01-21" },
-        { "name": "Hindi", "day": "Thursday", "date": "2026-01-22" },
-        { "name": "Physical Edu", "day": "Saturday", "date": "2026-01-24" }
+        { "name": "History", "day": "Friday", "date": "23-01-2026" },
+        { "name": "English (Core/Elective)", "day": "Saturday", "date": "24-01-2026" },
+        { "name": "Hindi (Core/Elective) ", "day": "Wednesday", "date": "28-01-2026" },
+        { "name": "Political Sci.", "day": "Thursday", "date": "29-01-2026" },
+        { "name": "Physical Edu", "day": "Monday", "date": "02-02-2026" },
       ]
     },
     "11-commerce": {
       subjects: [
-        { "name": "English", "day": "Monday", "date": "2026-01-19" },
-        { "name": "Accounts", "day": "Tuesday", "date": "2026-01-20" },
-        { "name": "B. Std.", "day": "Wednesday", "date": "2026-01-21" },
-        { "name": "Hindi", "day": "Thursday", "date": "2026-01-22" },
-        { "name": "ECO/Mathematics", "day": "Saturday", "date": "2026-01-24" }
+        { "name": "Economics", "day": "Friday", "date": "23-01-2026" },
+        { "name": "English (Core/Elective)", "day": "Saturday", "date": "24-01-2026" },
+        { "name": "Hindi (Core/Elective)", "day": "Wednesday", "date": "28-01-2026" },
+        { "name": "Accountancy", "day": "Friday", "date": "30-01-2026" },
+        { "name": "Business Studies", "day": "Monday", "date": "02-02-2026" },
+        { "name": "Maths", "day": "Tuesday", "date": "03-02-2026" },
       ]
     },
     "12-arts": {
       subjects: [
-        { "name": "History", "day": "Monday", "date": "2026-01-19" },
-        { "name": "English", "day": "Tuesday", "date": "2026-01-20" },
-        { "name": "Pol. Sci", "day": "Wednesday", "date": "2026-01-21" },
-        { "name": "Hindi", "day": "Thursday", "date": "2026-01-22" },
-        { "name": "Physical Edu", "day": "Saturday", "date": "2026-01-24" }
+        { "name": "Political Sci.", "day": "Friday", "date": "23-01-2026" },
+        { "name": "Hindi (Core/Elective)", "day": "Saturday", "date": "24-01-2026" },
+        { "name": "English (Core/Elective)", "day": "Wednesday", "date": "28-01-2026" },
+        { "name": "Physical Edu", "day": "Thursday", "date": "29-01-2026" },
+        { "name": "History", "day": "Monday", "date": "02-02-2026" },
       ]
     },
     "12-commerce": {
       subjects: [
-        { "name": "Accounts", "day": "Monday", "date": "2026-01-19" },
-        { "name": "English", "day": "Tuesday", "date": "2026-01-20" },
-        { "name": "Mathematics", "day": "Wednesday", "date": "2026-01-21" },
-        { "name": "Hindi", "day": "Thursday", "date": "2026-01-22" },
-        { "name": "B. Std.", "day": "Saturday", "date": "2026-01-24" }
+        { "name": "Maths", "day": "Friday", "date": "23-01-2026" },
+        { "name": "Hindi (Core/Elective)", "day": "Saturday", "date": "24-01-2026" },
+        { "name": "English (Core/Elective)", "day": "Wednesday", "date": "28-01-2026" },
+        { "name": "Business Studies", "day": "Friday", "date": "30-01-2026" },
+        { "name": "Accountancy", "day": "Monday", "date": "02-02-2026" },
+        { "name": "Economics", "day": "Tuesday", "date": "03-02-2026" },
       ]
     },
     "12-science": {
       subjects: [
-        { "name": "Chemistry", "day": "Monday", "date": "2026-01-19" },
-        { "name": "English", "day": "Tuesday", "date": "2026-01-20" },
-        { "name": "Mathematics/Bio", "day": "Wednesday", "date": "2026-01-21" },
-        { "name": "Hindi", "day": "Thursday", "date": "2026-01-22" },
-        { "name": "Physics", "day": "Saturday", "date": "2026-01-24" }
+        { "name": "Maths/Biology", "day": "Friday", "date": "23-01-2026" },
+        { "name": "Hindi (Core/Elective)", "day": "Saturday", "date": "24-01-2026" },
+        { "name": "English (Core/Elective)", "day": "Wednesday", "date": "28-01-2026" },
+        { "name": "Chemistry", "day": "Friday", "date": "30-01-2026" },
+        { "name": "Physics", "day": "Monday", "date": "02-02-2026" }
       ]
     }
   }
