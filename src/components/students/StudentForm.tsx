@@ -196,7 +196,7 @@ export const StudentForm = ({ student, onSubmit, onCancel, isLoading }: StudentF
         <div className="space-y-2">
           <Label>Fee Status *</Label>
           <Select
-            value={formData.fee_status}
+            value={formData.fee_status.toLowerCase()}
             onValueChange={(value: 'paid' | 'pending') => 
               setFormData({ ...formData, fee_status: value })
             }
@@ -214,7 +214,7 @@ export const StudentForm = ({ student, onSubmit, onCancel, isLoading }: StudentF
         <div className="space-y-2">
           <Label>Status *</Label>
           <Select
-            value={formData.status}
+            value={formData.status.toLowerCase()}
             onValueChange={(value: 'active' | 'inactive') => 
               setFormData({ ...formData, status: value })
             }
