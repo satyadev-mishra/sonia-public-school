@@ -345,7 +345,7 @@ export default function PreboardForm() {
                 <div className="rounded-lg bg-blue-50 border border-blue-200 p-4 mb-4">
                   <p><strong>Name:</strong> {student.student_name}</p>
                   <p><strong>Father:</strong> {student.father_name}</p>
-                  <p><strong>Fee Status:</strong> {student.fee_status}</p>
+                  <p><strong>Fee Status:</strong> {student.fee_status.toUpperCase()}</p>
                 </div>
             
                 {student.fee_status.toLowerCase() === 'pending' && (
@@ -355,7 +355,7 @@ export default function PreboardForm() {
                   </div>
                 )}
 
-                {student.fee_status === 'paid' && !student.is_submitted && !formSubmitted && (
+                {student.fee_status.toLowerCase() === 'paid' && !student.is_submitted && !formSubmitted && (
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div><Label>Aadhar Number *</Label><Input value={aadharNo} onChange={(e) => setAadharNo(e.target.value)} maxLength={12} placeholder="Enter 12-digit Aadhar" /></div>
                 
