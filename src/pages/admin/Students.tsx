@@ -220,23 +220,23 @@ export default function Students() {
                         <TableCell>
                           <span
                             className={`rounded-full px-2 py-1 text-xs font-medium ${
-                              student.fee_status === "paid"
+                              student.fee_status.toLowerCase() === "paid"
                                 ? "bg-primary/10 text-primary"
                                 : "bg-destructive/10 text-destructive"
                             }`}
                           >
-                            {student.fee_status === "paid" ? "Paid" : "Pending"}
+                            {student.fee_status.toLowerCase() === "paid" ? "Paid" : "Pending"}
                           </span>
                         </TableCell>
                         <TableCell>
                           <span
                             className={`rounded-full px-2 py-1 text-xs font-medium ${
-                              student.status === "active"
+                              student.status.toLowerCase() === "active"
                                 ? "bg-primary/10 text-primary"
                                 : "bg-muted text-muted-foreground"
                             }`}
                           >
-                            {student.status}
+                            {student.status.toLowerCase()}
                           </span>
                         </TableCell>
                         <TableCell className="text-right">
