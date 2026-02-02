@@ -13,13 +13,13 @@ const Index = () => {
             Welcome to <span className="text-primary">Sonia Public School</span>
           </h2>
           <p className="mb-8 text-lg text-muted-foreground">
-            Pre-Board Examination Portal 2025-26
+            Board Examination Portal 2025-26
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link to="/preboard-form">
               <Button size="lg" className="gap-2 px-8">
                 <FileText className="h-5 w-5" />
-                Fill Preboard Form
+                Fill Board Form
               </Button>
             </Link>
             <Link to="/login">
