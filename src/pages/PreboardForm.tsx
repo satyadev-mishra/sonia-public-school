@@ -171,7 +171,7 @@ export default function PreboardForm() {
     doc.setFontSize(16);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(0, 0, 0);
-    doc.text('PRE-BOARD EXAMINATION 2025-26', pageWidth / 2, 96, { align: 'center' });
+    doc.text('BOARD EXAMINATION 2025-26', pageWidth / 2, 96, { align: 'center' });
   
     doc.setFontSize(14);
     doc.setTextColor(beige.r, beige.g, beige.b);
@@ -304,7 +304,7 @@ export default function PreboardForm() {
       <main className="container mx-auto px-4 py-8">
         <Card className="mx-auto max-w-2xl">
           <CardHeader className="text-center">
-            <CardTitle className="text-2xl text-primary">Preboard Details 2025-26</CardTitle>
+            <CardTitle className="text-2xl text-primary">Bord Exam Details 2025-26</CardTitle>
             <CardDescription>Enter your class and roll number to proceed</CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
